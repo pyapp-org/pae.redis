@@ -12,4 +12,3 @@ __name__ = "PyApp Redis Extension"
 __version__ = get_installed_version("pyApp-Redis", __file__)
 __default_settings__ = ".default_settings"
 __checks__ = ".checks"
-

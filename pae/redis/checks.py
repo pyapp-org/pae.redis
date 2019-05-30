@@ -1,4 +1,5 @@
 from pyapp.checks.registry import register
-from .factory import engine_factory
 
-register(engine_factory)
+from .factory import client_factory
+
+register(client_factory)
