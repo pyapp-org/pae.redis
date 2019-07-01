@@ -11,9 +11,11 @@ pyApp - Redis
 This extension provides a `Redis` client factory to allow configuration to be
 configured via pyApp settings.
 
-The extension also provides checks to confirm the settings are correct and
-that the application is able to connect to the redis instance.
+The extension also provides checks to confirm the settings are correct and that
+the application is able to connect to the redis instance.
 
+It is strongly recommended to install the `hiredis` companion package to improve
+the performance of the redis client.
 
 Installation
 ============
@@ -26,9 +28,6 @@ Install using *pipenv*::
 
     pipenv install pyapp-redis
 
-
-Add `pae.redis` into the `EXT` list in your applications
-`default_settings.py`.
 
 Add the `REDIS` block into your runtime settings file::
 
@@ -49,9 +48,9 @@ Add the `REDIS` block into your runtime settings file::
 Usage
 =====
 
-The following example creates both `Connection` and `Session` instances::
+The following example creates a `Redis` client instance::
 
-    from pae.redis import get_client
+    from pyapp_ext.redis import get_client
 
     # Get connection
     redis = get_client()
@@ -62,6 +61,6 @@ The following example creates both `Connection` and `Session` instances::
 API
 ===
 
-`pae.redis.get_client(default: str = None) -> Redis`
+`pyapp_ext.redis.get_client(default: str = None) -> Redis`
 
     Get named `Redis` client instance
