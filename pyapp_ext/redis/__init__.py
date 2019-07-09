@@ -11,5 +11,6 @@ class Extension:
     """
     pyApp Redis Extension
     """
+
     default_settings = ".default_settings"
     checks = ".checks"

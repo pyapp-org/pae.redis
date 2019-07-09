@@ -1,5 +1,1 @@
-REDIS = {
-    "default": {
-        "url": "redis://user:password@host/database",
-    }
-}
+REDIS = {"default": {"url": "redis://user:password@host/database"}}
